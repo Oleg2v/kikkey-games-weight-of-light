@@ -13,3 +13,11 @@ Git read access and the GitHub repository web page work. Requests to `api.github
 Allow `api.github.com` and `oleg2v.github.io` in the cloud environment's network settings, preserving existing rules and package-manager presets. Then retry the existing platform authentication. Do not request or copy a new token unless a permitted API request establishes that additional authorization is actually needed.
 
 Cloud environment publication snapshots tools and files; it does not itself publish this website. A loopback development URL is not a public test link. No website publication should be reported complete before the workflow and public URL have been verified.
+
+## Verified publication attempt
+
+Source commit `82e94b6` was pushed to `origin/main`. GitHub Actions run [43947341898](https://github.com/Oleg2v/kikkey-games-weight-of-light/actions/runs/43947341898) built successfully and uploaded the 774 KB `github-pages` artifact. Deployment failed during `actions/configure-pages@v5` with `Get Pages site failed ... Not Found`: Pages is not enabled for this repository.
+
+To finish, open [Settings → Pages](https://github.com/Oleg2v/kikkey-games-weight-of-light/settings/pages), choose **Build and deployment → Source: GitHub Actions**, then choose **Re-run failed jobs** on that run. The user has already authorized this publication; the remaining issue is configuration capability, not missing publication consent. Adding `enablement: true` to the workflow is insufficient with the default `GITHUB_TOKEN`; the official action requires a separate token with adequate administration permissions for automatic enablement. No additional credential was requested.
+
+No public deployment or successful request to the Pages URL has been verified yet. This report must be updated after successful deployment and live-site checks.
